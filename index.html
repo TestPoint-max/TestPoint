@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestPoint - MCQ Practice Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1 class="logo">TestP<span class="green-o">o</span>int</h1>
+            <p class="tagline">Master Your Competitive Exams</p>
+        </header>
+
+        <!-- Subject Selection (shown initially) -->
+        <div id="subject-selection" class="section">
+            <h2>Choose Your Subject</h2>
+            <div class="subject-grid">
+                <button class="subject-btn" onclick="startQuiz('mathematics')">Mathematics</button>
+                <button class="subject-btn" onclick="startQuiz('physics')">Physics</button>
+                <button class="subject-btn" onclick="startQuiz('chemistry')">Chemistry</button>
+                <button class="subject-btn" onclick="startQuiz('biology')">Biology</button>
+            </div>
+        </div>
+
+        <!-- Quiz Container (hidden initially) -->
+        <div id="quiz-container" class="section hidden">
+            <div class="quiz-header">
+                <h2 id="subject-name"></h2>
+                <p>Question <span id="question-number">1</span> of <span id="total-questions">10</span></p>
+            </div>
+
+            <div class="question-card">
+                <h3 id="question-text"></h3>
+                <div id="options-container" class="options"></div>
+            </div>
+
+            <div class="quiz-controls">
+                <button id="prev-btn" onclick="previousQuestion()" disabled>Previous</button>
+                <button id="next-btn" onclick="nextQuestion()">Next</button>
+                <button id="submit-btn" onclick="submitQuiz()" class="hidden">Submit Quiz</button>
+            </div>
+        </div>
+
+        <!-- Results Container (hidden initially) -->
+        <div id="results-container" class="section hidden">
+            <h2>Quiz Results</h2>
+            <div class="results-card">
+                <div class="score-display">
+                    <h1 id="score"></h1>
+                    <p id="score-message"></p>
+                </div>
+                <div class="result-details">
+                    <p>Correct Answers: <span id="correct-count"></span></p>
+                    <p>Wrong Answers: <span id="wrong-count"></span></p>
+                    <p>Percentage: <span id="percentage"></span>%</p>
+                </div>
+                <button onclick="restartQuiz()" class="restart-btn">Take Another Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
