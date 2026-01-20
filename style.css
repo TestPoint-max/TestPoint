@@ -177,13 +177,22 @@ footer {
 }
 
 .option {
-    display: block;
-    padding: 10px 12px;
+    display: flex;
+    align-items: center;   /* 🔑 THIS fixes alignment */
+    gap: 10px;             /* space between radio & text */
+    padding: 12px 14px;
     margin: 8px 0;
     border-radius: 6px;
     background: #f8fafc;
     cursor: pointer;
+    font-size: 15px;
 }
+
+.option input[type="radio"] {
+    margin: 0;             /* remove default weird spacing */
+    transform: translateY(1px); /* tiny optical adjustment */
+}
+
 
 .option input {
     margin-right: 8px;
