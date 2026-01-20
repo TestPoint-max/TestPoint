@@ -13,6 +13,7 @@ body {
 }
 
 /* ================= NAVBAR ================= */
+/* ===== NAVBAR (LOCKED) ===== */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -22,21 +23,30 @@ body {
     border-bottom: 1px solid #e5e7eb;
 }
 
-.logo {
-    font-size: 26px;
-    font-weight: bold;
+.navbar-left {
+    display: flex;
+    align-items: center;
 }
 
-.green-o {
-    color: #16a34a;
-}
-
-.navbar nav a {
-    margin-left: 15px;
+.navbar-right a {
+    margin-left: 18px;
     text-decoration: none;
     color: #1f2937;
     font-weight: 500;
 }
+
+/* Logo */
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 /* ================= HERO ================= */
 .hero {
@@ -218,16 +228,7 @@ footer {
     font-weight: bold;
 }
 
-.logo {
-    font-size: 26px;
-    font-weight: bold;
-    margin: 0;
-}
 
-.logo a {
-    text-decoration: none;
-    color: inherit;
-}
 
 
 
