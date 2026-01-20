@@ -42,10 +42,21 @@ body {
     margin: 0;
 }
 
+.green-o {
+    color: #16a34a;   /* TestPoint brand green */
+}
+
 .logo a {
     text-decoration: none;
     color: inherit;
+    display: inline-block;
+    transition: transform 0.2s ease;
 }
+
+.logo a:hover {
+    transform: scale(1.05);
+}
+
 
 
 /* ================= HERO ================= */
