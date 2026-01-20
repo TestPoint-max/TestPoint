@@ -4,33 +4,25 @@
     "options": ["Chenab", "Ravi", "Jhelum", "Tawi"],
     "answer": "Tawi",
     "explanation": "River Tawi flows through Jammu city."
-  }
-]
-[
-  {
-    "question": "Which river is known as the lifeline of Jammu?",
-    "options": ["Chenab", "Ravi", "Jhelum", "Tawi"],
-    "answer": "Tawi",
-    "explanation": "River Tawi flows through Jammu city."
-  }
+  },
   {
     "question": "What is the winter capital of Jammu and Kashmir?",
     "options": ["Srinagar", "Jammu", "Leh", "Anantnag"],
     "answer": "Jammu",
     "explanation": "Jammu is the winter capital."
-  }
+  },
   {
     "question": "Who founded the Dogra dynasty?",
     "options": ["Ranjit Singh", "Gulab Singh", "Hari Singh", "Dhian Singh"],
     "answer": "Gulab Singh",
     "explanation": "Gulab Singh founded the Dogra dynasty."
-  }
+  },
   {
     "question": "Which pass connects Kashmir Valley with Ladakh?",
     "options": ["Banihal", "Zoji La", "Rohtang", "Pir Panjal"],
     "answer": "Zoji La",
     "explanation": "Zoji La connects Srinagar with Leh."
-  }
+  },
   {
     "question": "Which lake is the largest freshwater lake in Jammu and Kashmir?",
     "options": ["Dal Lake", "Wular Lake", "Manasbal Lake", "Pangong Lake"],
@@ -38,4 +30,3 @@
     "explanation": "Wular Lake is one of the largest freshwater lakes in Asia."
   }
 ]
-
