@@ -1,94 +1,29 @@
+/* ================= BASIC RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #333;
+    background-color: #f4f7fb;
+    color: #1f2937;
+    line-height: 1.6;
 }
 
-header {
-    text-align: center;
-    margin-bottom: 40px;
-    color: #000000;
-}
-
-.logo {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.green-o {
-    color: #4ade80;
-    display: inline-block;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-}
-
-.tagline {
-    font-size: 1.2rem;
-    opacity: 0.9;
-}
-
-.exam {
-    background: white;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.exam h2 {
-    color: #1e3a8a;
-}
-
-.syllabus ul {
-    padding-left: 20px;
-}
-
-.subjects button {
-    margin: 6px;
-    padding: 10px 14px;
-    border: none;
-    border-radius: 5px;
-    background-color: #2563eb;
-    color: white;
-    cursor: pointer;
-}
-
-.subjects button:hover {
-    background-color: #1e40af;
-}
-
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #e5e7eb;
-}
-
-
-/* ===============================
-   HOMEPAGE (Navbar + Hero)
-   =============================== */
-
+/* ================= NAVBAR ================= */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 25px;
-    background: #ffffff;
+    background-color: #ffffff;
     border-bottom: 1px solid #e5e7eb;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
 }
 
@@ -103,46 +38,111 @@ footer {
     font-weight: 500;
 }
 
+/* ================= HERO ================= */
 .hero {
     text-align: center;
     padding: 60px 20px;
-    background: #f4f7fb;
+    background-color: #f4f7fb;
 }
 
 .hero h1 {
     font-size: 32px;
+    margin-bottom: 10px;
 }
 
 .hero p {
-    max-width: 700px;
-    margin: 10px auto;
+    max-width: 720px;
+    margin: auto;
     color: #555;
+}
+
+.hero-buttons {
+    margin-top: 25px;
 }
 
 .hero-buttons button {
     margin: 10px;
-    padding: 12px 20px;
+    padding: 12px 22px;
     border-radius: 6px;
     border: none;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .primary {
-    background: #2563eb;
+    background-color: #2563eb;
     color: white;
 }
 
 .secondary {
-    background: #e5e7eb;
+    background-color: #e5e7eb;
+    color: #1f2937;
 }
 
-/* Mobile support */
+/* ================= SUBJECTS ================= */
+.subjects-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.subjects-section h2 {
+    margin-bottom: 25px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* ================= EXAMS ================= */
+.exams-section {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.exams-section ul {
+    list-style: none;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.exams-section li {
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #e5e7eb;
+    font-size: 14px;
+}
+
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
+
     .navbar nav {
         display: none;
     }
 
     .hero h1 {
         font-size: 24px;
+    }
+
+    .hero-buttons button {
+        width: 90%;
     }
 }
