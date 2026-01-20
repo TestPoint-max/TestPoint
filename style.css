@@ -6,10 +6,36 @@ body {
 }
 
 header {
-    background-color: #1e3a8a;
-    color: white;
-    padding: 20px;
     text-align: center;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.green-o {
+    color: #4ade80;
+    display: inline-block;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.tagline {
+    font-size: 1.2rem;
+    opacity: 0.9;
 }
 
 .exam {
