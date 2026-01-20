@@ -42,6 +42,28 @@ body {
     margin: 0;
 }
 
+/* ===== TestPoint Brand Animation ===== */
+.green-o {
+    color: #16a34a;                 /* Brand green */
+    display: inline-block;
+    animation: pulseO 1.8s ease-in-out infinite;
+}
+
+/* Subtle zoom in–out animation */
+@keyframes pulseO {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
 .green-o {
     color: #16a34a;   /* TestPoint brand green */
 }
@@ -53,9 +75,7 @@ body {
     transition: transform 0.2s ease;
 }
 
-.logo a:hover {
-    transform: scale(1.05);
-}
+
 
 
 
