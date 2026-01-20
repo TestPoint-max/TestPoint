@@ -7,6 +7,7 @@ const QUESTIONS_PER_TEST = 5;
 async function loadQuestions() {
     const response = await fetch("data/gk.json");
     questions = await response.json();
+    console.log("Loaded questions:", questions);
 
     shuffleArray(questions);
     quizQuestions = questions.slice(0, QUESTIONS_PER_TEST);
