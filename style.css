@@ -229,6 +229,12 @@ footer {
 }
 
 
+/* ===== MOBILE SAFETY ===== */
+@media (max-width: 768px) {
+    .navbar-right {
+        display: none;
+    }
+}
 
 
 
