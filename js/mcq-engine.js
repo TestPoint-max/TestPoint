@@ -1,15 +1,21 @@
 let questions = [];
+let quizQuestions = [];
 let currentIndex = 0;
 let score = 0;
+const QUESTIONS_PER_TEST = 5;
 
 async function loadQuestions() {
     const response = await fetch("data/gk.json");
     questions = await response.json();
+
+    shuffleArray(questions);
+    quizQuestions = questions.slice(0, QUESTIONS_PER_TEST);
+
     showQuestion();
 }
 
 function showQuestion() {
-    const q = questions[currentIndex];
+    const q = quizQuestions[currentIndex];
     const container = document.getElementById("mcq-container");
 
     container.innerHTML = `
@@ -39,7 +45,7 @@ function checkAnswer() {
         return;
     }
 
-    const correctAnswer = questions[currentIndex].answer;
+    const correctAnswer = quizQuestions[currentIndex].answer;
 
     if (selected.value === correctAnswer) {
         score++;
@@ -50,19 +56,34 @@ function checkAnswer() {
         feedback.style.color = "red";
     }
 
-    setTimeout(nextQuestion, 1200);
+    setTimeout(nextQuestion, 1000);
 }
 
 function nextQuestion() {
     currentIndex++;
 
-    if (currentIndex < questions.length) {
+    if (currentIndex < quizQuestions.length) {
         showQuestion();
     } else {
-        document.getElementById("mcq-container").innerHTML = `
+        showResult();
+    }
+}
+
+function showResult() {
+    document.getElementById("mcq-container").innerHTML = `
+        <div class="mcq-card">
             <h2>Test Completed</h2>
-            <p>Your Score: ${score} / ${questions.length}</p>
-        `;
+            <p>Your Score: <strong>${score} / ${quizQuestions.length}</strong></p>
+            <button onclick="location.reload()">🔄 Try Another Set</button>
+        </div>
+    `;
+}
+
+/* Utility: shuffle array */
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
 }
 
