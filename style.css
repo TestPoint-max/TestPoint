@@ -218,10 +218,17 @@ footer {
     font-weight: bold;
 }
 
-/* Clickable logo */
-.logo-link {
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.logo a {
     text-decoration: none;
     color: inherit;
 }
+
+
 
 
